@@ -7,7 +7,11 @@ const timeImg = document.getElementById("timeImg");
 const updateCardUI = data => {
 
   // add class show to the card
-  card.classList.add("show");  
+  card.classList.add("show");
+  
+  setTimeout(() => {
+    card.classList.add("transition");
+  }, 300)
 
   // update the image with day or night
   let time = data.isDay ? "day" : "night";
