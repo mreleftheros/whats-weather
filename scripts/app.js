@@ -1,15 +1,24 @@
 const cityForm = document.getElementById("cityForm");
-const cityCard = document.getElementById("cityCard");
+const cardDetails = document.getElementById("cardDetails");
 const timeImg = document.getElementById("timeImg");
 
 // function that updates the card UI with given data
 const updateCardUI = data => {
+
   // update the image with day or night
-  let imgSrc = data.isDay ? 
+  let time = data.isDay ? "day" : "night";
+  let imgSrc = `./assets/${time}.png`;
+  timeImg.src = imgSrc;
 
   let html = `
-
+    <h5 class="main__container__card__details__city">${data.city}</h5>
+    <p class="main__container__card__details__area">${data.area}</p>
+    <p class="main__container__card__details__country">${data.country}</p>
+    <p class="main__container__card__details__weather">${data.weather}</p>
+    <p class="main__container__card__details__temperature">${data.temperature} &deg;C</p>
   `;
+
+  cardDetails.innerHTML = html;
 };
 
 // function that handles submit event on cityForm

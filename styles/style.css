@@ -77,11 +77,13 @@ body {
   padding: 0.5rem;
   position: relative;
   transition: border 0.2s ease-out;
+  font-size: 3rem;
 }
 .main__container__form__input:focus {
   border-bottom: solid 3px purple;
 }
 .main__container__card {
+  margin-top: 1rem;
   background: #fff;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -91,4 +93,19 @@ body {
   width: 100%;
   max-width: 40rem;
   object-fit: cover;
+}
+.main__container__card__details {
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+.main__container__card__details__city {
+  font-size: 3rem;
+}
+.main__container__card__details__temperature {
+  font-size: 3rem;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

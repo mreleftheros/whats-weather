@@ -65,6 +65,7 @@ body {
         padding: .5rem;
         position: relative;
         transition: border .2s ease-out;
+        font-size: 3rem;
 
         &:focus {
           border-bottom: solid 3px purple;
@@ -73,6 +74,7 @@ body {
     }
 
     &__card {
+      margin-top: 1rem;
       background: #fff;
       border-radius: .5rem;
       padding: 1rem;
@@ -82,6 +84,24 @@ body {
         width: 100%;
         max-width: 40rem;
         object-fit: cover;
+      }
+
+      &__details {
+        min-height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2rem;
+
+        &__city {
+          font-size: 3rem;
+        }
+
+        &__temperature {
+          font-size: 3rem;
+          font-weight: bold;
+        }
       }
     }
   }
