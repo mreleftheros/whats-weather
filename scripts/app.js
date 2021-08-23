@@ -6,7 +6,7 @@ const handleCityForm = e => {
 
   let cityInput = e.currentTarget.city.value.trim();
 
-  updateCity(cityInput);
+  updateCityAndWeather(cityInput);
 
   e.currentTarget.reset();
 };

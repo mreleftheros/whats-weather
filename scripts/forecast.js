@@ -21,3 +21,19 @@ const getWeather = async cityKey => {
 
   return data[0];
 };
+
+// async function that calls functions getCity and getWeather and retuns object with data
+const updateCityAndWeather = async cityInput => {
+  const cityInfo = await getCity(cityInput);
+  const weatherInfo = await getWeather(cityInfo.Key);
+
+  return {
+    key: cityInfo.Key,
+    city: cityInfo.EnglishName,
+    country: cityInfo.Country.ID,
+    area: cityInfo.AdministrativeArea.EnglishName,
+    isDay: weatherInfo.IsDayTime,
+    weather: weatherInfo.WeatherText,
+    temperature: weatherInfo.Temperature.Metric.Value
+  };
+};
