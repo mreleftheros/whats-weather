@@ -65,7 +65,7 @@ body {
         padding: .5rem;
         position: relative;
         transition: border .2s ease-out;
-        font-size: 3rem;
+        font-size: 2rem;
 
         &:focus {
           border-bottom: solid 3px purple;
@@ -73,12 +73,22 @@ body {
       }
     }
 
+    &__card.show {
+      display: block;
+      opacity: 1;
+      transform: translateX(0)
+    }
+
     &__card {
+      display: none;
+      transform:translateX(-400rem);
+      opacity: 0;
       margin-top: 1rem;
       background: #fff;
       border-radius: .5rem;
       padding: 1rem;
       box-shadow: 10px 10px 10px gray;
+      transition: opacity .3s ease-in-out, transform 3s ease-out;
 
       &__img {
         width: 100%;

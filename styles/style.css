@@ -77,17 +77,26 @@ body {
   padding: 0.5rem;
   position: relative;
   transition: border 0.2s ease-out;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .main__container__form__input:focus {
   border-bottom: solid 3px purple;
 }
+.main__container__card.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
 .main__container__card {
+  display: none;
+  transform: translateX(-400rem);
+  opacity: 0;
   margin-top: 1rem;
   background: #fff;
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 10px 10px 10px gray;
+  transition: opacity 0.3s ease-in-out, transform 3s ease-out;
 }
 .main__container__card__img {
   width: 100%;

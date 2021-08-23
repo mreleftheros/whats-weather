@@ -1,9 +1,13 @@
 const cityForm = document.getElementById("cityForm");
+const card = document.getElementById("card");
 const cardDetails = document.getElementById("cardDetails");
 const timeImg = document.getElementById("timeImg");
 
 // function that updates the card UI with given data
 const updateCardUI = data => {
+
+  // add class show to the card
+  card.classList.add("show");  
 
   // update the image with day or night
   let time = data.isDay ? "day" : "night";
