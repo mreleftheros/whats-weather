@@ -4,12 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boilerplate</title>
+  <title>What's Weather</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   
+  <header class="header">
+    <h1 class="header__title">What's Weather</h1>
+  </header>
 
+  <main class="main">
+    <section class="main__container">
+      <!-- form -->
+      <form class="main__container__form" id="cityForm" autocomplete="off">
+        <label for="city" class="main__container__form__label">Search for a city below</label>
+        <input type="text" class="main__container__form__input" name="city" id="city" placeholder="Enter city name...">
+      </form>
+      <!-- card -->
+      <div class="main__container__card">
+        <img class="main__container__card__img" src="https://via.placeholder.com/300">
+        <div class="main__container__carddetails"></div>
+      </div>
+    </section>
+  </main>
 
   <script src="scripts/app.js"></script>
 </body>

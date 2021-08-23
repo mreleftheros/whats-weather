@@ -1,2 +1,89 @@
 @import "defaults";
+@import "mixins";
 
+body {
+  background: linear-gradient(#7fffd4 40%, rgba(0, 255, 255, .5) 50%);
+}
+
+.header {
+  min-height: 15vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px #52a78a;
+  
+  @include mq(768px) {
+    display: flex;
+  }
+  
+  &__title {
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    font-size: 4rem;
+    text-align: center;
+
+    &::first-letter {
+      font-size: 5rem;
+      color: rgb(187, 255, 0);
+    }
+  }
+}
+
+.main {
+  &__container {
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    margin: 1rem auto 0;
+    padding: 1rem;
+
+    @include mq(768px) {
+      max-width: 40rem;
+    }
+
+    &__form {
+      padding: .5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 10rem;
+
+      &__label {
+        font-size: 3rem;
+      }
+
+      &__input {
+        margin-top: 1rem;
+        border: none;
+        border-bottom: solid transparent 3px;
+        outline: none;
+        background: none;
+        appearance: none;
+        text-align: center;
+        padding: .5rem;
+        position: relative;
+        transition: border .2s ease-out;
+
+        &:focus {
+          border-bottom: solid 3px purple;
+        }
+      }
+    }
+
+    &__card {
+      background: blue;
+      padding: 1rem;
+      box-shadow: 10px 10px 10px gray;
+
+      &__img {
+        width: 100%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
