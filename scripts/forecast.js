@@ -19,7 +19,5 @@ const getWeather = async cityKey => {
   const response = await fetch(urlBase + urlQuery);
   const data = await response.json();
 
-  console.log(data);
+  return data[0];
 };
-
-getWeather(186405);
