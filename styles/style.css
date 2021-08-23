@@ -45,13 +45,14 @@ body {
 .main__container {
   text-align: center;
   font-size: 2rem;
-  width: 100%;
+  width: 80%;
   margin: 1rem auto 0;
   padding: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .main__container {
     max-width: 40rem;
+    width: 100%;
   }
 }
 .main__container__form {
@@ -81,14 +82,13 @@ body {
   border-bottom: solid 3px purple;
 }
 .main__container__card {
-  background: blue;
+  background: #fff;
+  border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 10px 10px 10px gray;
 }
 .main__container__card__img {
   width: 100%;
-}
-.main__container__card__img img {
-  width: 100%;
+  max-width: 40rem;
   object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
