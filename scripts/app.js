@@ -34,9 +34,6 @@ const handleCityForm = e => {
   e.preventDefault();
 
   let cityInput = e.currentTarget.city.value.trim();
-  console.log(cityInput, countryInput)
-
-  if (cityInput.length === 0) return; // simple check
 
   let countryInput = e.currentTarget.country.value.trim();
 
@@ -49,3 +46,6 @@ const handleCityForm = e => {
 
 // event listeners
 cityForm.addEventListener("submit", handleCityForm);
+cityForm.addEventListener("submit", () => {
+  console.log("EEE")
+});

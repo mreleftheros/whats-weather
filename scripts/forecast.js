@@ -9,10 +9,10 @@ const getCity = async (city, country) => {
   const data = await response.json();
 
   if (country) {
-    console.log(data.filter(city => city.Country.EnglishName.includes(country)));
+    console.log(data.filter(city => city.Country.EnglishName.toLowerCase().includes(country.toLowerCase())));
   }
 
-  return data[0];
+  console.log(data[0]);
 };
 
 // async function to fetch the weather of the given city key
