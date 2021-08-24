@@ -23,8 +23,8 @@ const getWeather = async cityKey => {
 };
 
 // async function that calls functions getCity and getWeather and retuns object with data
-const updateCityAndWeather = async cityInput => {
-  const cityInfo = await getCity(cityInput);
+const updateCityAndWeather = async (cityInput, countryInput) => {
+  const cityInfo = await getCity(cityInput, countryInput);
   const weatherInfo = await getWeather(cityInfo.Key);
 
   return {
