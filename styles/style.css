@@ -57,20 +57,34 @@ body {
 }
 .main__container__form {
   padding: 0.5rem;
+}
+.main__container__form__control.optional {
+  position: relative;
+}
+.main__container__form__control.optional::before {
+  content: "*Optional";
+  position: absolute;
+  top: 0;
+  right: 2px;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.main__container__form__control {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  min-height: 15rem;
+  min-height: 10rem;
+  margin: 1rem 0;
+  box-shadow: 1px 1px 3px gray;
 }
-.main__container__form__label {
+.main__container__form__control__label {
   font-size: 3rem;
   color: #fff;
   text-shadow: 1px 1px 3px #000;
-  margin-top: 1rem;
 }
-.main__container__form__input {
-  margin-top: -0.2rem;
+.main__container__form__control__input {
   border: none;
   border-bottom: solid transparent 3px;
   outline: none;
@@ -82,7 +96,7 @@ body {
   transition: border 0.2s ease-out;
   font-size: 2rem;
 }
-.main__container__form__input:focus {
+.main__container__form__control__input:focus {
   border-bottom: solid 3px purple;
 }
 .main__container__card.show.transition {

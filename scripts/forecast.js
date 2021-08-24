@@ -7,7 +7,7 @@ const getCity = async city => {
 
   const response = await fetch(urlBase + urlQuery);
   const data = await response.json();
-
+  console.log(data);
   return data[0];
 };
 

@@ -17,10 +17,15 @@
     <section class="main__container">
       <!-- form -->
       <form class="main__container__form" id="cityForm" autocomplete="off">
-        <label for="city" class="main__container__form__label">Search for a City below</label>
-        <input type="text" class="main__container__form__input" name="city" id="city" placeholder="Enter a city name...">
-        <label for="country" class="main__container__form__label">With/out Country acronym</label>
-        <input type="text" class="main__container__form__input" name="country" id="country" placeholder="Enter a country acronym...">
+        <div class="main__container__form__control">
+          <label for="city" class="main__container__form__control__label">Search for a City below</label>
+          <input type="text" class="main__container__form__control__input" name="city" id="city" placeholder="Enter a city name...">
+        </div>
+
+        <div class="main__container__form__control optional">
+          <label for="country" class="main__container__form__control__label">With/out Country</label>
+          <input type="text" class="main__container__form__control__input" name="country" id="country" placeholder="Enter a country acronym...">
+        </div>
       </form>
       <!-- card -->
       <div class="main__container__card" id="card">
