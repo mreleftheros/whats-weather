@@ -1,4 +1,4 @@
-const key = "9z7d1E0QZA81FYbJEuXhaZT4kINFeZbW";
+const key = "gFDOiOuhoLVVIKOij1T317UoGZDCQ6FP";
 
 // async function to fetch the city that was passed
 const getCity = async (city, country) => {
@@ -9,9 +9,9 @@ const getCity = async (city, country) => {
   const data = await response.json();
 
   if (country) {
-    return data.filter(city => city.Country.EnglishName.includes(country))[0];
+    console.log(data.filter(city => city.Country.EnglishName.includes(country)));
   }
-  
+
   return data[0];
 };
 

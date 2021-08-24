@@ -34,6 +34,7 @@ const handleCityForm = e => {
   e.preventDefault();
 
   let cityInput = e.currentTarget.city.value.trim();
+  console.log(cityInput, countryInput)
 
   if (cityInput.length === 0) return; // simple check
 
