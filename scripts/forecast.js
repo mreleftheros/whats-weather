@@ -1,13 +1,17 @@
 const key = "9z7d1E0QZA81FYbJEuXhaZT4kINFeZbW";
 
 // async function to fetch the city that was passed
-const getCity = async city => {
+const getCity = async (city, country) => {
   const urlBase = "https://dataservice.accuweather.com/locations/v1/cities/search";
   const urlQuery = `?q=${city}&apikey=${key}`;
 
   const response = await fetch(urlBase + urlQuery);
   const data = await response.json();
-  console.log(data);
+
+  if (country) {
+    return data.filter(city => city.Country.EnglishName.includes(country))[0];
+  }
+  
   return data[0];
 };
 
