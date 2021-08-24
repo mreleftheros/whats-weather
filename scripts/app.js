@@ -35,6 +35,8 @@ const handleCityForm = e => {
 
   let cityInput = e.currentTarget.city.value.trim();
 
+  if (cityInput.length === 0) return; // simple check
+
   let countryInput = e.currentTarget.country.value.trim();
 
   updateCityAndWeather(cityInput, countryInput)
